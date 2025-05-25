@@ -1,0 +1,281 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Выравниваем слайды по верхнему краю */
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    scroll-snap-type: y mandatory; /* Включаем привязку к слайдам */
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    scroll-snap-align: start; /* Привязываем слайды к началу контейнера */
+}
+
+h1, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff; /* Светлый текст для контраста с фоном */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #eee; /* Светлый текст для контраста с фоном */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Стили для фона */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Помещаем видео на задний план */
+}
+
+.background-video video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопка */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Дополнительные стили (по желанию) */
+.date {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.daten {
+    font-size: 6em;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.timeline {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.timeline-time {
+    font-weight: bold;
+    min-width: 80px;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.timeline-event {
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.dress-code-palette {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.dress-code-image {
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.address {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.map-container {
+    margin: 20px 0;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rsvp-form {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
+}
+
+.couple-photo {
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.couple-name {
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.countdown {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Стили для слайдов */
+#slide1 { /* Слайд 1: Приглашение */ }
+#slide2 { /* Слайд 2: Тайминг */ }
+#slide3 { /* Слайд 3: Дресс-код */ }
+#slide4 { /* Слайд 4: Детали */ }
+#slide5 { /* Слайд 5: Как добраться */ }
+#slide6 { /* Слайд 6: RSVP */ }
+#slide7 { /* Слайд 7: До встречи */ }
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Меньший размер заголовка */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Меньший размер подзаголовка */
+    }
+
+    p {
+        font-size: 1em; /* Меньший размер основного текста */
+        max-width: 90%; /* Увеличенная ширина для лучшей читаемости */
+    }
+
+    .button {
+        padding: 10px 20px; /* Меньшие отступы в кнопке */
+        font-size: 1em;
+    }
+
+    .date {
+        font-size: 1.2em;
+    }
+	
+	.daten {
+		font-size:20em;
+	}
+
+    .timeline {
+        max-width: 90%;
+    }
+
+    .timeline-time {
+        min-width: 60px;
+    }
+
+    .color-box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dress-code-image {
+        max-width: 90%;
+    }
+
+    .address {
+        font-size: 1em;
+    }
+
+    .map-container {
+        height: 200px; /* Меньшая высота карты */
+    }
+
+    .couple-photo {
+        max-width: 90%;
+    }
+
+    .couple-name {
+        max-width: 90%;
+    }
+
+    .countdown {
+        font-size: 1.2em;
+    }
+}
